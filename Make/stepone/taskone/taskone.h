@@ -1,5 +1,5 @@
-#ifndef STEPONE_H
-#define STEPONE_H
+#ifndef TASKONE_H
+#define TASKONE_H
 void LineOne();
 void LineTwo();
 void rebuild(char lineone[], char linetwo[], char dealedinput[]);
