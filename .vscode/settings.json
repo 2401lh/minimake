@@ -4,6 +4,8 @@
         "string.h": "c",
         "algorithm": "c",
         "grammarchecking.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "varchecking.h": "c",
+        "preceeding.h": "c"
     }
 }

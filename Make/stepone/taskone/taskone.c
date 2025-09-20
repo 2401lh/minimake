@@ -3,10 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-void LineOne()  //输入并简单处理第一行命令
+void LineOne(char lineone[], char* line[])  //输入并简单处理第一行命令
 {
-    char lineone[100];
-    fgets(lineone, sizeof(lineone), stdin);
+    strcpy(lineone, line[0]);
     int lengthlineone = strlen(lineone);
     if (lengthlineone > 0 && lineone[lengthlineone - 1] == '\n') 
     {
@@ -14,10 +13,9 @@ void LineOne()  //输入并简单处理第一行命令
     }
 }
 
-void LineTwo()  //输入并简单处理第二行命令
+void LineTwo(char linetwo[], char* line[])  //输入并简单处理第二行命令
 {
-    char linetwo[100];
-    fgets(linetwo, sizeof(linetwo), stdin);
+    strcpy(linetwo, line[1]);
     int lengthlinetwo = strlen(linetwo);
     if (lengthlinetwo > 0 && linetwo[lengthlinetwo - 1] == '\n') 
     {
@@ -25,11 +23,33 @@ void LineTwo()  //输入并简单处理第二行命令
     }
 }
 
-void rebuild(char lineone[], char linetwo[], char dealedinput[])  //将两行命令重组成一行
+void LineThree(char linethree[], char* line[])  //输入并简单处理第三行命令
+{
+    strcpy(linethree, line[2]);
+    int lengthlinethree = strlen(linethree);
+    if (lengthlinethree > 0 && linethree[lengthlinethree - 1] == '\n') 
+    {
+        linethree[lengthlinethree - 1] = ' ';
+    }
+}
+
+void LineFour(char linefour[], char* line[])  //输入并简单处理第四行命令
+{
+    strcpy(linefour, line[3]);
+    int lengthlinefour = strlen(linefour);
+    if (lengthlinefour > 0 && linefour[lengthlinefour - 1] == '\n') 
+    {
+        linefour[lengthlinefour - 1] = ' ';
+    }
+}
+
+void rebuild(char lineone[], char linetwo[], char linethree[], char linefour[], char dealedinput[])  //将四行命令重组成一行
 {
     char integratedline[200];
     strcpy(integratedline, lineone);
     strcat(integratedline, linetwo);
+    strcat(integratedline, linethree);
+    strcat(integratedline, linefour);
     strcpy(dealedinput, integratedline);
 }
 
@@ -59,7 +79,7 @@ void ARG(int argc, char *argv[], char dealedinput[])
 
 void DoYouNeedHelp(char *argv[])
 {
-    for (int i = 0; argv[i] !='\0'; i++)
+    for (int i = 0; argv[i] != NULL; i++)
 	{
 		if (argv[i] == "--help")
 		{

@@ -70,3 +70,11 @@ void PrintMiddumConsequence(char *line[])
         }
     }
 }
+
+void StepOneTaskTwoMain(char *line[])
+{
+    filter(line);
+    RemoveSpace(line);
+    RemoveDefine(line);
+    PrintMiddumConsequence(line);
+}
