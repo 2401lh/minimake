@@ -1,10 +1,8 @@
-#include<iostream>
-using namespace std;
+#include<stdio.h>
+
 int main()
 {
-    int a;
-    cin>>a;
-    cout<<a+1<<endl;
-    cout<<a+2<<endl;
+    int a=2;
+    printf("a的值是%d",a);
     return 0;
 }
