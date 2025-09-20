@@ -11,7 +11,8 @@ int main()
 	char *argv[20] = {0};
 	char *line[500] = {0};
 	int argc = 0;
-	const char *validvar[] = {"--help", "gcc", "g++" , "-o" , "echo" , "git" , "apply" , "target" , "object" , NULL};
+	char comp1[] = "--help" , comp2[] = "gcc" , comp3[] = "g++" , comp4[] = "-o" , comp5[] = "echo" , comp6[] = "git" , comp7[] = "apply" , comp8[] = "target" , comp9[] = "object";
+	char *validvar[] = {comp1, comp2, comp3, comp4, comp5, comp6, comp7, comp8, comp9 , NULL};
 	LineOne(l1, line);
 	LineTwo(l2, line);
 	rebuild(l1, l2, l3, l4, dealed);
@@ -20,6 +21,6 @@ int main()
 	IfinValidVar(argv, validvar);
 	readfile(line);
 	StepOneTaskTwoMain(line);
-	StepOneThreeMain(line);
+	StepOneTaskThreeMain(line);
 	return 0;
 }

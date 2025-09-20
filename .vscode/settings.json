@@ -7,5 +7,6 @@
         "stdio.h": "c",
         "varchecking.h": "c",
         "preceeding.h": "c"
-    }
+    },
+    "C_Cpp.dimInactiveRegions": false
 }

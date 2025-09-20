@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <string.h>
 
-int MatchWithPool(const char *option, char *validvar[]) 
+int MatchWithPool(const char *needed, char *validvar[]) 
 {
     for (int i = 0; validvar[i] != NULL; i++) 
     {
-        if (strcmp(option, validvar[i]) == 0) 
+        if (strcmp(needed, validvar[i]) == 0) 
         {
             return 1;
         }
